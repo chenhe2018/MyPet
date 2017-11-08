@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.pet.ch.mypet.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,7 +21,7 @@
         </activity>
 
         <service
-            android:name=".PetService"
+            android:name="com.pet.ch.mypet.PetService"
             android:enabled="true"
             android:exported="true"></service>
 
