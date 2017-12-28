@@ -31,26 +31,26 @@ public class MainActivity extends AppCompatActivity {
         });
         //
 
-        Button btn_start = (Button)findViewById(R.id.main_start_service);
+        Button btn_start = (Button) findViewById(R.id.main_start_service);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(),"service已开启", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "service已开启", Toast.LENGTH_LONG);
                 toast.show();
                 //
-                Intent intent = new Intent(MainActivity.this,PetService.class);
+                Intent intent = new Intent(MainActivity.this, PetService.class);
                 startService(intent);
             }
         });
 
-        Button btn_stop = (Button)findViewById(R.id.main_stop_service);
+        Button btn_stop = (Button) findViewById(R.id.main_stop_service);
         btn_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(),"service已关闭", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "service已关闭", Toast.LENGTH_LONG);
                 toast.show();
                 //
-                Intent intent = new Intent(MainActivity.this,PetService.class);
+                Intent intent = new Intent(MainActivity.this, PetService.class);
                 stopService(intent);
             }
         });
