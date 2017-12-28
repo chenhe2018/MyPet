@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "service已关闭", Toast.LENGTH_LONG);
                 toast.show();
                 //
-                Intent intent = new Intent(MainActivity.this, PetService.class);
+                final Intent intent = new Intent();
+                intent.setAction("com.pet.ch.mypet.PetService");
                 stopService(intent);
             }
         });

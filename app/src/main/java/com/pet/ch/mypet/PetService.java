@@ -25,8 +25,9 @@ public class PetService extends Service {
 
     @Override
     public void onDestroy() {
-        this.mFloatLayout.clearAnimation();
         super.onDestroy();
+        if(mFloatLayout!=null)
+            mWindowManager.removeView(mFloatLayout);
     }
 
     @Override
