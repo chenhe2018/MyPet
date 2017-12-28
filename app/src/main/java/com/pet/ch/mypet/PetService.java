@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -26,6 +25,7 @@ public class PetService extends Service {
 
     @Override
     public void onDestroy() {
+        this.mFloatLayout.clearAnimation();
         super.onDestroy();
     }
 
@@ -99,6 +99,7 @@ public class PetService extends Service {
             @Override
             public void onClick(View v) {
                 Toast.makeText(PetService.this, "onClick", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent();
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.setClass(getApplicationContext(),MainActivity.class);

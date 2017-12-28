@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        //
 
         Button btn_start = (Button) findViewById(R.id.main_start_service);
         btn_start.setOnClickListener(new View.OnClickListener() {
