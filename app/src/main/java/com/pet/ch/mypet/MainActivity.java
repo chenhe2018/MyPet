@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "service已开启", Toast.LENGTH_LONG);
-                toast.show();
-                //
+                Toast.makeText(getApplicationContext(), "service已开启", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, PetService.class);
                 startService(intent);
             }
@@ -47,9 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btn_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "service已关闭", Toast.LENGTH_LONG);
-                toast.show();
-                //
+                Toast.makeText(getApplicationContext(), "service已关闭", Toast.LENGTH_LONG).show();
                 final Intent intent = new Intent();
                 intent.setAction("com.pet.ch.mypet.PetService");
                 stopService(intent);
