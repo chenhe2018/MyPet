@@ -12,14 +12,13 @@ android {
             storePassword props['KEYSTORE_PASSWORD']
         }
     }
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 26
     defaultConfig {
-        applicationId "com.pet.ch.mypet"
-        minSdkVersion 20
-        targetSdkVersion 25
+        applicationId "com.pet.mypet"
+        minSdkVersion 21
+        targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "0.1-alpha"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
