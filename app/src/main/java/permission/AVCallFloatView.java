@@ -83,9 +83,7 @@ public class AVCallFloatView extends FrameLayout {
         animationDrawable.start();
         floatView.measure(View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED),View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED));
 
-
         addView(floatView);
-
     }
 
     public void setParams(WindowManager.LayoutParams params) {
